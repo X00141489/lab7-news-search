@@ -112,8 +112,7 @@ export default class News extends React.Component {
               <img src={article.urlToImage} alt="article image" className="img-article"></img>
               <p>{article.description}</p>
               <p>{article.content}</p>
-              <p><Link href="/story"><a>Read More</a></Link></p>
-              <p onClick={this.test}>click..</p>
+              <p><Link as={`/article/${index}`} href={`/article?id=${index}`}><a>Read More</a></Link></p>
             </section>
           ))}
         </div>
