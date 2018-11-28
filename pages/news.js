@@ -105,6 +105,7 @@ export default class News extends React.Component {
           { /* Iterate through articles using Array map) */}
           { /* Display author, publishedAt, image, description, and content */}
           { /* for each story. Also a link for more.. */}
+          { /* the map index property gives the position in the array for each article - see the link below */}
           {this.state.articles.map((article, index) => (
             <section key={index}>
               <h3>{article.title}</h3>
@@ -112,6 +113,7 @@ export default class News extends React.Component {
               <img src={article.urlToImage} alt="article image" className="img-article"></img>
               <p>{article.description}</p>
               <p>{article.content}</p>
+              { /* adding the index value as a paramater to be passed with a request for the single article page*/}
               <p><Link as={`/article/${index}`} href={`/article?id=${index}`}><a>Read More</a></Link></p>
             </section>
           ))}
