@@ -46,7 +46,10 @@ class Article extends React.Component {
   // render() method generates the page
   //
   render() {
+    // Position in articles array to use 
     let id = 0;
+
+    // Get single article
     let article = this.props.articles[id];
 
     return (
@@ -56,7 +59,7 @@ class Article extends React.Component {
         <div>
           {/* Show the article) */}
           <section>
-
+          <h3>{article.title}</h3>
 
           </section>
           ))}
