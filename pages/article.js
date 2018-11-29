@@ -117,4 +117,5 @@ class Article extends React.Component {
   }
 } // End class
 
+// export withRouter - enables this class to access React Router properties, e.g. to get the URl parameters
 export default withRouter(Article)
